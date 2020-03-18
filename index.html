@@ -4,54 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify clone</title>
+    <!-- FONT AWESOME -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-    <div id="app">
-        <!-- Main content -->
-        <main id="main-window">
-            <!-- Sidebar -->
-            <aside id="sidebar">
-                <div class="sidebar-top">Logo e Nav</div>
+  <div id="app">
+      <!-- Main content -->
+      <main id="main-window">
+          <!-- Sidebar -->
+          <aside id="sidebar">
+              <div class="sidebar-top">Logo e Nav</div>
 
-                <div class="sidebar-bottom">Account</div>
-            </aside>
+              <div class="sidebar-bottom">Account</div>
+          </aside>
 
-            <!-- Content -->
-            <div id="content">
-                <div class="content-top-bar">Top bare here</div>
-                <div class="scrollable">
-                    <nav class="content-menu">Menu</nav>
+          <!-- CONTENT -->
+          <div id="content">
+              <div class="content-top-bar">Top bare here</div>
+              <div class="scrollable">
+                  <nav class="content-menu">Menu</nav>
 
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
-                    <section class="content-category">
-                        <h2>Category title</h2>
-                    </section>
+                  <!-- SECTION: RECENTLY-PLAYED -->
+                  <section class="recently">
+                    <h2 class="title">Recently played</h2>
+                    <div class="box-container">
+
+                      <div class="box">
+                        <img src="/img/metal_lifting.jpg" alt="metal">
+                        <h4>Heavy Metal</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                      <div class="box">
+                        <img src="/img/stranger.jpeg" alt="metal">
+                        <h4>Stranger Things, Vol. 1 (a Netlifx Original Series Soundtrack)</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                      <div class="box">
+                        <img src="/img/aquietplace.jpeg" alt="metal">
+                        <h4>A quiet place</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                      <div class="box">
+                        <img src="/img/split.jpeg" alt="metal">
+                        <h4>Split</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                      <div class="box">
+                        <img src="/img/cure.jpeg" alt="metal">
+                        <h4>A cure for wellness</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                      <div class="box">
+                        <img src="/img/sinister.jpeg" alt="metal">
+                        <h4>Sinister</h4>
+                        <h6>Subtitle</h6>
+                      </div>
+
+                    </div>
+                  </section>
+
+                  <!-- SECTION: FOR USER -->
+                  <section class="for-user">
+                    <h2 class="title">Creato per John Doe</h2>
+                    <h6>Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    <div class="box-container">
+
+                      <div class="box">
+                        <img src="img/radar.jpeg" alt="radar">
+                        <h4>Release Radar</h4>
+                      </div>
+
+                      <div class="box">
+                        <img src="img/mixdaily.jpeg" alt="mixdaily">
+                        <h4>Daily Mix 1</h4>
+                      </div>
+
+                    </div>
+                  </section>
+
+                  <!-- SECTION: POPULAR -->
+                  <section class="popular">
+                    <h2 class="title">Artisti più popolari</h2>
+                    <h6>Più ascolti, più accurati saranno i suggerimenti.</h6>
+                    <div class="box-container">
+
+                      <div class="box">
+                        <img src="img/young.jpeg" alt="lanadelrey">
+                        <h4>Lana del Rey</h4>
+                      </div>
+
+                      <div class="box">
+                        <img src="img/einaudi.jpeg" alt="einaudi">
+                        <h4>Ludovico Einaudi</h4>
+                      </div>
+
+                    </div>
+                  </section>
+
                 </div>
-            </div>
-        </main>
+                <!-- END SCROLLABLE -->
 
-        <!-- Bottom Player -->
-        <footer id="player">Player</footer>
-    </div>
+              </div>
+          </div>
+      </main>
+
+      <!-- Bottom Player -->
+      <footer id="player">Player</footer>
+  </div>
 
 </body>
 </html>
