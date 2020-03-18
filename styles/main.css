@@ -42,23 +42,68 @@ a{
 
 /* SIDEBAR */
 #sidebar{
-  flex-basis: 230px; /* larghezza sidebar */
+  flex-basis: 200px; /* larghezza sidebar */
   display: flex;
   flex-direction: column;
 }
 
-.sidebar-top{
+/* SIDEBAR: TOP */
+#sidebar .sidebar-top{
+  position: relative;
   flex-grow: 1;
-  background: #444;
+  background: black;
 }
 
-.sidebar-bottom{
-  height: 80px; /*debug*/
-  background: #222;
+#sidebar .sidebar-top .top-logo{
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
+#sidebar .sidebar-top .top-logo img{
+  max-width: 20%;
+  margin-right: 5px;
+}
 
+#sidebar .sidebar-top .row{
+  display: flex;
+  align-items: center;
+  border-left: 2px solid transparent;
+  margin-bottom: 5px;
+  padding-left: 8px;
+}
 
+#sidebar .sidebar-top .row:hover{
+  border-left: 2px solid #86C52E;
+}
+
+#sidebar .sidebar-top img{
+  max-width: 15%;
+  margin-right: 5px;
+}
+
+#sidebar .sidebar-top li{
+  padding-left: 8px;
+}
+
+#sidebar .sidebar-bottom{
+  background-color: black;
+  padding-left: 8px;
+}
+
+#sidebar .sidebar-bottom .install-app{
+  width: 95%;
+  border-bottom: 1px solid white;
+}
+
+#sidebar .sidebar-bottom .user-logo{
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+#sidebar .sidebar-bottom .user-logo i{
+  padding-right: 5px;
+}
 
 
 
