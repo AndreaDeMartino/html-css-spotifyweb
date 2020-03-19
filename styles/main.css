@@ -20,6 +20,10 @@ a{
   list-style: none;
 }
 
+.u-inline-block{
+  display: inline-block;
+}
+
 .u-inline-block li{
   display: inline-block;
 }
@@ -65,7 +69,7 @@ a{
 }
 
 #sidebar .sidebar__top .top__logo img{
-  max-width: 20%;
+  max-width: 20px;
   margin-right: 5px;
 }
 
@@ -82,7 +86,7 @@ a{
 }
 
 #sidebar .sidebar__top img{
-  max-width: 15%;
+  max-width: 20px;
   margin-right: 5px;
 }
 
@@ -196,27 +200,17 @@ a{
 }
 
 #content .content__scrollable .u-box-container .box img{
-  max-width: 100%;
+  width: 100%;
 }
 
-#content .content__scrollable .popular .u-box-container .box img{
-  max-width: 100%;
+#content .content__scrollable .scrollable__popular .u-box-container .box img{
+  width: 100%;
   border-radius: 50%;
 }
 
 
 
 /* BOTTOM PLAYER */
-
-/* DEBUG:  */
-.red{
-  background-color: red;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-
 #player{
   background: #333;
   display: flex;
@@ -237,16 +231,17 @@ a{
   text-align: center;
 }
 
-#player .player__center .center__song-bar{
-
-}
-
-#player .center__song-bar .song-bar__box-bar{
+#player .player__center .center__song-bar .song-bar__box-bar{
   position: relative;
   width: 500px;
 }
 
-#player .song-bar__grey-line{
+#player .player__right .song-bar__box-bar{
+  position: relative;
+  width: 80px;
+}
+
+#player .song-bar--grey-line{
   position: absolute;
   bottom: 3px;
   left: 0;
@@ -255,7 +250,7 @@ a{
   background-color: grey;
 }
 
-#player .song-bar__white-line{
+#player .song-bar--white-line{
   position: absolute;
   bottom: 3px;
   left: 0;
@@ -265,11 +260,37 @@ a{
   z-index: 2;
 }
 
-#player .player__right .song-bar__box-bar{
-  position: relative;
-  width: 80px;
+/* RESPONSIVE */
+
+@media (max-width: 1919px) and (min-width: 1024px){
+  #content .content__scrollable .u-box-container .box{
+    flex-basis: calc(100% / 4);
+  }
 }
 
+@media (max-width: 1023px){
+  #content .content__scrollable .u-box-container .box{
+    flex-basis: calc(100% / 2);
+  }
 
+  #sidebar h1,
+  #sidebar h2,
+  #sidebar h5,
+  #sidebar h6,
+  #sidebar .button__plus{
+    display: none;
+  }
 
-/* END */
+  #sidebar{
+    flex-basis: 40px; /* larghezza sidebar */
+  }
+
+  #player .player__center .center__song-bar .song-bar__box-bar {
+    position: relative;
+    width: 200px;
+  }
+
+  #sidebar .sidebar__bottom .bottom__install-app{
+    border-bottom: 0;
+  }
+}
