@@ -164,6 +164,7 @@ h6{
 .u-no-padbot{
   padding-bottom: 0;
 }
+
 /* LAYOUT */
 #app{
   display: flex;
@@ -338,12 +339,40 @@ h6{
   width: 100%;
 }
 
+#content .content__scrollable .u-box-container .box__logo{
+  position: relative;
+  width: 100%;
+}
+
+#content .box__logo .layover{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+
+#content .box__logo.radius .layover{
+  border-radius: 50%;
+}
+
+#content .box__logo .layover i{
+  font-size: 60px;
+}
+
+#content .box__logo .layover:hover{
+  opacity: 1;
+}
+
 #content .content__scrollable .scrollable__popular .u-box-container .box img{
   width: 100%;
   border-radius: 50%;
 }
-
-
 
 /* BOTTOM PLAYER */
 #player{
