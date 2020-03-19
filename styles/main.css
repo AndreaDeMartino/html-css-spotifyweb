@@ -16,12 +16,17 @@ a{
 }
 
 /* UTILITY */
-.vanilla-list{
+.u-vanilla-list{
   list-style: none;
 }
 
-.inline-block li{
+.u-inline-block li{
   display: inline-block;
+}
+
+.u-box-container{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -39,7 +44,6 @@ a{
   display: flex;
 }
 
-
 /* SIDEBAR */
 #sidebar{
   flex-basis: 200px; /* larghezza sidebar */
@@ -48,24 +52,24 @@ a{
 }
 
 /* SIDEBAR: TOP */
-#sidebar .sidebar-top{
+#sidebar .sidebar__top{
   position: relative;
   flex-grow: 1;
   background: black;
 }
 
-#sidebar .sidebar-top .top-logo{
+#sidebar .sidebar__top .top__logo{
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-#sidebar .sidebar-top .top-logo img{
+#sidebar .sidebar__top .top__logo img{
   max-width: 20%;
   margin-right: 5px;
 }
 
-#sidebar .sidebar-top .row{
+#sidebar .sidebar__top .sidebar__button__line{
   display: flex;
   align-items: center;
   border-left: 2px solid transparent;
@@ -73,39 +77,37 @@ a{
   padding-left: 8px;
 }
 
-#sidebar .sidebar-top .row:hover{
+#sidebar .sidebar__top .sidebar__button__line:hover{
   border-left: 2px solid #86C52E;
 }
 
-#sidebar .sidebar-top img{
+#sidebar .sidebar__top img{
   max-width: 15%;
   margin-right: 5px;
 }
 
-#sidebar .sidebar-top li{
+#sidebar .sidebar__top li{
   padding-left: 8px;
 }
 
-#sidebar .sidebar-bottom{
+#sidebar .sidebar__bottom{
   background-color: black;
   padding-left: 8px;
 }
 
-#sidebar .sidebar-bottom .install-app{
+#sidebar .sidebar__bottom .bottom__install-app{
   width: 95%;
   border-bottom: 1px solid white;
 }
 
-#sidebar .sidebar-bottom .user-logo{
+#sidebar .sidebar__bottom .bottom__user-logo{
   padding: 10px 0;
   font-size: 12px;
 }
 
-#sidebar .sidebar-bottom .user-logo i{
+#sidebar .sidebar__bottom .bottom__user-logo i{
   padding-right: 5px;
 }
-
-
 
 /* CONTENT */
 #content{
@@ -115,7 +117,7 @@ a{
 }
 
 /* TOP BAR */
-#content .content-top-bar{
+#content .content__top-bar{
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +127,7 @@ a{
   z-index: 1;
 }
 
-#content .content-top-bar .upgrade{
+#content .content__top-bar .top-bar__upgrade{
   position: absolute;
   display: inline-block;
   right: 20px ;
@@ -138,7 +140,7 @@ a{
 }
 
 /* SCROLLABLE */
-#content .scrollable{
+#content .content__scrollable{
   position: absolute;
   top: 0;
   left: 0;
@@ -151,20 +153,20 @@ a{
 }
 
 /* SCROLLABLE - CONTENT MENU */
-#content .content-menu{
+#content .scrollable__top-menu{
   text-align: center;
   padding-top: 15px;
 }
 
-#content .content-menu li{
+#content .scrollable__top-menu li{
   padding-right: 10px;
 }
 
-#content .content-menu a{
+#content .scrollable__top-menu a{
   position: relative;
 }
 
-#content .content-menu a:after{
+#content .scrollable__top-menu a:after{
   content: "";
   position: absolute;
   height: 2px;
@@ -176,43 +178,98 @@ a{
   opacity: 0;
 }
 
-#content .content-menu a:hover:after{
+#content .scrollable__top-menu a:hover:after{
   opacity: 1;
 }
 
 /* SCROLLABLE - CONTENT */
-#content .scrollable .recently,
-#content .scrollable.for-user,
-#content .scrollable .popular{
+#content .content__scrollable .scrollable__recently,
+#content .content__scrollable.scrollable__for-user,
+#content .content__scrollable .scrollable__popular{
   padding-top: 20px;
 }
 
-#content .scrollable .box-container{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#content .scrollable .box-container .box{
+#content .content__scrollable .u-box-container .box{
   flex-basis: calc(100% / 6);
   text-align: center;
   padding-right: 10px;
 }
 
-#content .scrollable .box-container .box img{
+#content .content__scrollable .u-box-container .box img{
   max-width: 100%;
 }
 
-#content .scrollable .popular .box-container .box img{
+#content .content__scrollable .popular .u-box-container .box img{
   max-width: 100%;
   border-radius: 50%;
 }
 
 
 
-
-
 /* BOTTOM PLAYER */
-#player {
-  height: 80px; /*debug*/
-  background: #333;
+
+/* DEBUG:  */
+.red{
+  background-color: red;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
+
+
+#player{
+  background: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#player .player__left{
+  display: flex;
+  align-items: center;
+}
+
+#player .left__img-album img{
+  height: 40px;
+}
+
+#player .player__center .center__song-commands{
+  text-align: center;
+}
+
+#player .player__center .center__song-bar{
+
+}
+
+#player .center__song-bar .song-bar__box-bar{
+  position: relative;
+  width: 500px;
+}
+
+#player .song-bar__grey-line{
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: grey;
+}
+
+#player .song-bar__white-line{
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 2px;
+  width: 30%;
+  background-color: white;
+  z-index: 2;
+}
+
+#player .player__right .song-bar__box-bar{
+  position: relative;
+  width: 80px;
+}
+
+
+
+/* END */
