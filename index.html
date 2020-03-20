@@ -8,92 +8,94 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/c2709405dd.js" crossorigin="anonymous"></script>
-    <!-- CSS -->
+    <link rel="stylesheet" href="shared/shared.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-  <div id="app">
-    <!-- Main content -->
-    <main id="main-window">
-      <!-- Sidebar -->
-      <aside id="sidebar">
-        <div class="sidebar__top">
-          <!-- TOP LOGO SPOTIFY -->
-          <div class="top__logo">
-            <img src="img/logo-small.svg" alt="Spotify Logo">
-            <h1>Spotify</h1>
+  <div id="app" class="u-montserrat">
+      <!-- MAIN-WINDOW -->
+    <main class="main-window">
+        <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- SIDEBAR SECTION: NAVIGATION -->
+        <section class="sidebar__navigation">
+
+          <div class="sidebar__link u-mgtop-s u-mgbot-md">
+            <img class="sidebar__logo" src="img/logo-small.svg" alt="logospot">
+          </div>
+          <div class="sidebar__link">
+            <img src="img/home.svg" alt="home">
+            <h6>Home</h6>
+          </div>
+          <div class="sidebar__link">
+            <img src="img/search.svg" alt="home">
+            <h6>Cerca</h6>
+          </div>
+          <div class="sidebar__link">
+            <img src="img/libreria.svg" alt="home">
+            <h6>La tua libreria</h6>
+          </div>
+          <div class="sidebar__link">
+            <h5>PLAYLIST</h5>
+          </div>
+          <div class="sidebar__link u-mgbot-s">
+            <i class="button__plus fas fa-plus-square u-grey u-text-xl"></i>
+            <h6>Crea Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
+          </div>
+          <div class="sidebar__link playlist__item">
+            <h6>Nome Playlist</h6>
           </div>
 
-          <!-- TOP BUTTONS -->
-          <div class="top__main-act-buttons">
-            <a href="#">
-            <div class="sidebar__button__line u-padtop-s u-padbot-xs">
-              <img src="img/home.svg" alt="Home">
-              <h6>Home</h6>
-            </div>
-            </a>
+        </section>
 
-            <a href="#">
-            <div class="sidebar__button__line u-padbot-xs">
-              <img src="img/search.svg" alt="Home">
-              <h6>Cerca</h6>
-            </div>
-            </a>
+        <!-- SIDEBAR SECTION: USER -->
+        <section class="sidebar__user">
 
-            <a href="#">
-            <div class="sidebar__button__line u-padbot-xs">
-              <img src="img/libreria.svg" alt="Home">
-              <h6>La tua libreria</h6>
-            </div>
-            </a>
+          <div class="sidebar__link">
+            <i class="fas fa-arrow-circle-down u-padlx-xs"></i>
+            <h6>Installa app</h6>
+          </div>
+          <div class="sidebar__link u-text-center u-padbot-s">
+            <i class="fas fa-user-circle u-text-xl"></i>
+            <h5 class="u-padlx-s">John Doe</h5>
           </div>
 
-          <div class="sidebar__playlist">
-            <h5 class="u-padtop-s u-padbot-s u-padsx">PLAYLIST</h5>
-            <a href="#">
-            <div class="sidebar__button__line">
-              <img class="button__plus" src="img/plus.jpg" alt="plus">
-              <h6>Crea Playlist</h6>
-            </div>
-            </a>
-            <ul class="playlist__list vanilla list u-padsx">
-              <li><h6>Nome Playlist</h6></li>
-              <li><h6>Nome Playlist</h6></li>
-              <li><h6>Nome Playlist</h6></li>
-              <li><h6>Nome Playlist</h6></li>
-              <li><h6>Nome Playlist</h6></li>
-              <li><h6>Nome Playlist</h6></li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="sidebar__bottom">
-          <div class="bottom__install-app u-padsx-s">
-            <i class="fas fa-arrow-circle-down u-inline-block u-textsm u-text-grey"></i>
-            <h6 class="u-inline-block u-padbot-xs">Installa app</h6>
-          </div>
-            <i class="fas fa-user-circle u-inline-block u-padbot-xs u-padtop-xs"></i>
-            <h6 class="bottom__user-logo u-inline-block u-text-white u-text-md">John Doe</h6>
-
-
-        </div>
+        </section>
       </aside>
 
       <!-- CONTENT -->
-      <div id="content">
-
-        <div class="content__top-bar">
-          <div class="top-bar__upgrade">
-            <a href="#">EFFETTUA L'UPGRADE</a>
+      <div class="content">
+        <!-- CONTENT: HEADER -->
+        <header class="content__header-bar">
+          <div class="header-bar__upgrade">
+            <h5 class="u-text-xs">EFFETTUA L'UPGRADE</h5>
           </div>
-        </div>
+        </header>
 
-        <div class="content__scrollable">
+        <!-- CONTENT: START THE SCROLLABLE AREA -->
+        <div class="scrollable">
 
-          <!-- MENU SCROLLABLE -->
-          <nav class="scrollable__top-menu">
+          <!-- CONTENT: MENU -->
+          <nav class="content__menu u-text-center u-padtop-md">
             <ul class="u-vanilla-list u-inline-block">
               <li><a href="#">IN EVIDENZA</a></li>
               <li><a href="#">PODCAST</a></li>
@@ -104,205 +106,187 @@
             </ul>
           </nav>
 
-          <!-- SECTION: RECENTLY-PLAYED -->
-          <section class="scrollable__recently">
-            <h2 class="scrollable__title u-padbot">Recently played</h2>
-            <div class="u-box-container">
+          <!-- CONTENT: CARDS -->
 
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/metal_lifting.jpg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
+          <!-- RECENTLY CARDS -->
+          <h2 class="cards-title u-padbot-md u-padtop-md u-text-bold u-text-l">Recently played</h2>
+          <div class="cards-container u-text-center">
+
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/metal_lifting.jpg" alt="metal">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
                 </div>
-                <h4 class="u-padtop-s u-padbot-xs">Heavy Metal</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
               </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/stranger.jpeg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-                <h4 class="u-padtop-s u-padbot-xs">Stranger Things, Vol. 1 (a Netlifx Original Series Soundtrack)</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
-              </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/aquietplace.jpeg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s u-padbot-xs">A quiet place</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
-              </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/split.jpeg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s u-padbot-xs">Split</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
-              </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/cure.jpeg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s u-padbot-xs">A cure for wellness</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
-              </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/sinister.jpeg" alt="metal">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s u-padbot-xs">Sinister</h4>
-                <h6 class="u-padbot-xs">Subtitle</h6>
-              </div>
-
+              <h4 class="u-padtop-s u-padbot-xs">Heavy Metal</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
             </div>
-          </section>
-
-          <!-- SECTION: FOR USER -->
-          <section class="scrollable__for-user">
-            <h2 class="scrollable__title u-padbot-s">Creato per John Doe</h2>
-            <h6 class="u-padbot">Più ascolti, più accurati saranno i suggerimenti.</h6>
-            <div class="u-box-container">
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/radar.jpeg" alt="radar">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/stranger.jpeg" alt="stranger">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
                 </div>
-
-                <h4 class="u-padtop-s">Release Radar</h4>
               </div>
-
-              <div class="box">
-                <div class="box__logo">
-                  <img src="img/mixdaily.jpeg" alt="mixdaily">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s">Daily Mix 1</h4>
-              </div>
-
+              <h4 class="u-padtop-s u-padbot-xs">Stranger Things, Vol. 1 (a Netlifx Original Series Soundtrack)</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
             </div>
-          </section>
-
-          <!-- SECTION: POPULAR -->
-          <section class="scrollable__popular">
-            <h2 class="scrollable__title u-padbot-s">Artisti più popolari</h2>
-            <h6 class="u-padbot">Più ascolti, più accurati saranno i suggerimenti.</h6>
-            <div class="u-box-container">
-
-              <div class="box">
-                <div class="box__logo radius">
-                  <img src="img/young.jpeg" alt="lanadelrey">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/aquietplace.jpeg" alt="queiet">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
                 </div>
-
-                <h4 class="u-padtop-s">Lana del Rey</h4>
-              </div>
-              <div class="box">
-                <div class="box__logo radius">
-                  <img src="img/einaudi.jpeg" alt="einaudi">
-                  <div class="layover">
-                    <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-                  </div>
-                </div>
-
-                <h4 class="u-padtop-s">Ludovico Einaudi</h4>
               </div>
 
+              <h4 class="u-padtop-s u-padbot-xs">A quiet place</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
             </div>
-          </section>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/split.jpeg" alt="split">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s u-padbot-xs">Split</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
+            </div>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/cure.jpeg" alt="cure">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s u-padbot-xs">A cure for wellness</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
+            </div>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/sinister.jpeg" alt="metal">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s u-padbot-xs">Sinister</h4>
+              <h6 class="u-padbot-xs">Subtitle</h6>
+            </div>
+
+          </div>
+
+          <!-- USER CARDS -->
+          <h2 class="cards-title u-padbot-xs u-padtop-md u-text-bold u-text-l">Creato per John Doe</h2>
+          <h6 class="u-padbot-md ">Più ascolti, più accurati saranno i suggerimenti.</h6>
+          <div class="cards-container u-text-center">
+
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/radar.jpeg" alt="radar">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s u-padbot-xs">Release Radar</h4>
+            </div>
+            <div class="card">
+              <div class="card-logo">
+                <img src="img/mixdaily.jpeg" alt="mixdaily">
+                <div class="card-layover">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s u-padbot-xs">Daily Mix 1</h4>
+            </div>
+
+          </div>
+
+          <!-- POPULAR CARDS -->
+          <h2 class="cards-title u-padbot-xs u-padtop-md u-text-bold u-text-l">Artisti più popolari</h2>
+          <h6 class="u-padbot-md">Più ascolti, più accurati saranno i suggerimenti.</h6>
+          <div class="cards-container u-text-center">
+
+            <div class="card">
+              <div class="card-logo">
+                <img class="u-radius" src="img/young.jpeg" alt="lanadelrey">
+                <div class="card-layover u-radius">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s">Lana del Rey</h4>
+            </div>
+            <div class="card">
+              <div class="card-logo">
+                <img class="u-radius" src="img/einaudi.jpeg" alt="einaudi">
+                <div class="card-layover u-radius">
+                  <i class="far fa-play-circle u-text-xl"></i>
+                </div>
+              </div>
+              <h4 class="u-padtop-s">Ludovico Einaudi</h4>
+            </div>
+
+          </div>
+
         </div>
-
       </div>
     </main>
 
+    <!-- BOTTOM PLAYER -->
+    <footer class="player">
 
+      <!-- PLAYER: ALBUM -->
+      <div class="album">
 
-
-    <!-- Bottom Player -->
-    <footer id="player" class="u-padtop-s u-padbot-s">
-
-      <div class="player__left">
-        <div class="left__img-album">
-          <img class="u-padsx" src="img/aquietplace.jpeg" alt="queit">
+        <div class="album__logo">
+          <img class="u-padtop-xs" src="img/aquietplace.jpeg" alt="queit">
         </div>
-        <div class="left__song-text u-padsx">
-          <h5>Sinister</h5>
-          <h6>Brano Nome</h6>
+        <div class="album__title u-padlx-xs">
+          <h5 class="u-text-xs">Sinister</h5>
+          <h6 class="u-text-xs u-grey">Brano Nome</h6>
+        </div>
+        <div class="album__icons">
+          <i class="far fa-heart u-text-s u-grey u-padlx-xs"></i>
+          <i class="far fa-folder u-text-s u-grey u-padlx-xs"></i>
         </div>
 
-        <div class="left__cta-icons">
-          <i class="far fa-heart u-padsx u-text-grey"></i>
-          <i class="far fa-folder u-padsx u-text-grey"></i>
-        </div>
       </div>
 
-      <div class="player__center u-padrx u-padsx-s">
-        <div class="center__song-commands">
-          <i class="fas fa-random"></i>
-          <i class="fas fa-step-backward u-padsx"></i>
-          <i class="far fa-play-circle u-padsx-xl u-padrx-xl"></i>
-          <i class="fas fa-step-forward"></i>
-          <i class="fas fa-redo u-padsx"></i>
+      <!-- PLAYER: MUSIC CONTROL -->
+      <div class="control u-padlx-xs u-padrx-xs">
+
+        <div class="control__cta u-padtop-xs u-text-center">
+          <i class="fas fa-random u-text-md "></i>
+          <i class="fas fa-step-backward u-text-md u-padlx-xs"></i>
+          <i class="far fa-play-circle u-text-md  u-padlx-s u-padrx-s"></i>
+          <i class="fas fa-step-forward u-text-md  u-padrx-xs"></i>
+          <i class="fas fa-redo u-text-md "></i>
         </div>
 
-        <div class="center__song-bar">
-          <ul class="u-vanilla-list u-inline-block">
-            <li><h6>0.25</h6></li>
-            <li>
-              <div class="song-bar__box-bar">
-                <div class="song-bar--grey-line"></div>
-                <div class="song-bar--white-line"></div>
-              </div>
-            </li>
-            <li><h6>4.35</h6></li>
-          </ul>
+        <div class="control__progress-bar u-padtop-xs">
+          <h6 class="u-text-xs u-padrx-xs">0:25</h6>
+          <div class="progress-bar">
+            <div class="progress-bar__full"></div>
+            <div class="progress-bar__progress"></div>
+          </div>
+          <h6 class="u-text-xs u-padlx-xs">4:35</h6>
         </div>
+
       </div>
 
-      <div class="player__right u-padrx">
-        <ul class="u-vanilla-list u-inline-block">
-          <li><i class="fas fa-list-ul u-textsm u-padrx-s"></i></li>
-          <li><i class="fas fa-desktop u-textsm u-padrx-s"></i></li>
-          <li><i class="fas fa-volume-up u-textsm u-padrx-s"></i></li>
-          <li>
-            <div class="song-bar__box-bar">
-              <div class="song-bar--grey-line"></div>
-              <div class="song-bar--white-line"></div>
-            </div>
-          </li>
-        </ul>
+      <!-- PLAYER: MUSIC VOLUME -->
+      <div class="music-volume">
+        <div class="volume__icons">
+          <i class="fas fa-list-ul u-text-s u-padrx-xs"></i>
+          <i class="fas fa-desktop u-text-s u-padrx-xs"></i>
+          <i class="fas fa-volume-up u-text-s u-padrx-xs"></i>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-bar__full"></div>
+          <div class="progress-bar__progress"></div>
+        </div>
+
       </div>
 
     </footer>
